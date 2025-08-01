@@ -1,0 +1,13 @@
+# Environment
+.venv/
+venv/
+__pycache__/
+
+# Frontend
+node_modules/
+dist/
+build/
+
+# Model
+*.h5
+
