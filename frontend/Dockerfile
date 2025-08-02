@@ -1,0 +1,18 @@
+FROM node:22-alpine AS build-stage
+
+WORKDIR /home/app
+
+COPY package*.json ./
+RUN npm install --production
+
+COPY . .
+
+RUN npm run build
+
+FROM nginx:stable-alpine
+
+COPY --from=build-stage /home/app/dist /usr/share/nginx/html
+
+COPY ./default.conf /etc/nginx/conf.d/default.conf
+
+CMD ["nginx", "-g", "daemon off;"]

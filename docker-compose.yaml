@@ -1,0 +1,16 @@
+version: '3'
+services:
+    server:
+        container_name: digit-backend
+        build:
+            context: ./server
+            dockerfile: Dockerfile
+        ports:
+            - '6000:80'
+    frontend:
+        container_name: digit-frontend
+        build:
+            context: ./frontend
+            dockerfile: Dockerfile
+        ports:
+            - '6666:80'
