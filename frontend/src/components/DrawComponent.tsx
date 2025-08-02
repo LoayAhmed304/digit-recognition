@@ -99,11 +99,11 @@ const DrawingCanvas: React.FC = ({ handlePredict }) => {
                 onMouseLeave={stopDrawing}
             />
             <div className="drawing-controls">
-                <button className="predict-button" onClick={handleExport}>
-                    predict
-                </button>
                 <button className="clear-button" onClick={clearCanvas}>
                     Clear
+                </button>
+                <button className="predict-button" onClick={handleExport}>
+                    predict
                 </button>
             </div>
         </div>

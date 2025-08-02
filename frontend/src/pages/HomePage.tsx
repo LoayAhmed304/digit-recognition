@@ -25,9 +25,9 @@ function HomePage() {
     return (
         <div className="home-page">
             <div className="header-section">
-                <h1>Character Recognition</h1>
+                <h1>Digit Recognition</h1>
                 <p className="description">
-                    Draw a digit (0-9) or a letter (a-z, A-Z) in the box below
+                    Draw a digit (0-9) in the box below
                 </p>
             </div>
 
