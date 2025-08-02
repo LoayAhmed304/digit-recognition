@@ -3,7 +3,12 @@ import React, { useRef, useState, useEffect } from 'react';
 const CANVAS_SIZE = 280;
 const TARGET_SIZE = 28;
 
-const DrawingCanvas: React.FC = ({ handlePredict }) => {
+interface DrawingCanvasProps {
+handlePredict: (imageData: number[]) => void;
+}
+
+const DrawingCanvas: React.FC<DrawingCanvasProps> = ({ handlePredict }) => {
+
     const canvasRef = useRef<HTMLCanvasElement>(null);
     const [drawing, setDrawing] = useState(false);
 
@@ -63,11 +68,10 @@ const DrawingCanvas: React.FC = ({ handlePredict }) => {
 
         const pixels: number[] = [];
         for (let i = 0; i < imageData.length; i += 4) {
-            const [r, g, b, a] = [
+            const [r, g, b] = [
                 imageData[i],
                 imageData[i + 1],
                 imageData[i + 2],
-                imageData[i + 3],
             ];
 
             const gray = (r + g + b) / 3;

@@ -4,12 +4,12 @@ import predict
 import utils
 
 
-model = utils.load_model('../models/mnist_model_256_3.h5')
+model = utils.load_model('models/mnist_model_256_3.h5')
 print("Loaded model successfully.")
 
 app = FastAPI()
 app.add_middleware(CORSMiddleware, 
-                allow_origins="http://localhost:5173",
+                allow_origins="https://digit.loay.work",
                 allow_credentials=True,
                 allow_methods=["*"],
                 allow_headers=["*"])

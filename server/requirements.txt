@@ -10,5 +10,8 @@ typing-inspection==0.4.1
 typing_extensions==4.14.1
 uvicorn==0.29.0 
 numpy==1.26.4
-tensorflow==2.15.0
+tensorflow==2.19.0
 scikit-learn==1.4.2
+fastapi[standard]
+matplotlib
+
