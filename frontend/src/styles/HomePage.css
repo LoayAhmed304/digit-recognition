@@ -1,4 +1,3 @@
-/* remove margin and padding of the default home page */
 body {
     margin: 0;
     padding: 0;
@@ -44,7 +43,7 @@ body {
     gap: 40px;
     max-width: 1200px;
     width: 100%;
-    align-items: stretch; /* This ensures both containers have the same height */
+    align-items: stretch;
     padding: 0 20px;
 }
 
@@ -59,7 +58,7 @@ body {
     backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.2);
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-    min-height: 400px; /* Set minimum height to match results section */
+    min-height: 400px;
 }
 
 .drawing-area {
@@ -85,7 +84,7 @@ body {
     color: #999;
     font-size: 1.1rem;
     pointer-events: none;
-    opacity: 0; /* Hide the placeholder when canvas is present */
+    opacity: 0;
 }
 
 .drawing-canvas {
@@ -114,16 +113,6 @@ body {
     box-shadow: 0 4px 20px rgba(255, 107, 107, 0.4);
     text-transform: uppercase;
     letter-spacing: 1px;
-}
-
-.clear-button:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 8px 30px rgba(255, 107, 107, 0.6);
-    background: linear-gradient(45deg, #ff5252, #ff6b6b);
-}
-
-.clear-button:active {
-    transform: translateY(-1px);
 }
 
 .drawing-area:hover {
@@ -282,32 +271,9 @@ body {
     opacity: 0.8;
 }
 
-.waiting-icon {
-    font-size: 4rem;
-    margin-bottom: 20px;
-    animation: bounce 2s ease-in-out infinite;
-}
-
 .no-prediction p {
     font-size: 1.2rem;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
-}
-
-/* Responsive design */
-@media (max-width: 1024px) {
-    .main-content {
-        max-width: 900px;
-        gap: 30px;
-    }
-
-    .header-section h1 {
-        font-size: 2.5rem;
-    }
-
-    .drawing-section,
-    .results-section {
-        padding: 25px;
-    }
 }
 
 @media (max-width: 768px) {
@@ -373,89 +339,6 @@ body {
 
     .accuracy-display {
         max-width: 250px;
-    }
-}
-@media (max-width: 480px) {
-    .home-page {
-        padding: 10px;
-    }
-
-    .header-section h1 {
-        font-size: 1.8rem;
-    }
-
-    .description {
-        font-size: 0.9rem;
-    }
-
-    .drawing-section,
-    .results-section {
-        padding: 15px;
-        border-radius: 15px;
-    }
-
-    .drawing-area {
-        width: 200px !important;
-        height: 200px !important;
-        border-radius: 15px;
-    }
-
-    .drawing-controls {
-        margin-top: 15px;
-    }
-
-    .clear-button,
-    .predict-button {
-        padding: 12px 24px;
-        font-size: 14px;
-        border-radius: 25px;
-        width: 150px;
-    }
-
-    .recognized-character-box {
-        width: 80px;
-        height: 80px;
-        border-radius: 20px;
-    }
-
-    .character {
-        font-size: 2.5rem;
-    }
-
-    .character-glow {
-        top: -15px;
-        left: -15px;
-        right: -15px;
-        bottom: -15px;
-        border-radius: 25px;
-    }
-
-    .prediction-display h3 {
-        font-size: 1.3rem;
-    }
-
-    .character-label {
-        font-size: 1rem;
-    }
-
-    .accuracy-label {
-        font-size: 1rem;
-    }
-
-    .accuracy-percentage {
-        font-size: 1.2rem;
-    }
-
-    .accuracy-display {
-        max-width: 200px;
-    }
-
-    .waiting-icon {
-        font-size: 3rem;
-    }
-
-    .no-prediction p {
-        font-size: 1rem;
     }
 }
 
