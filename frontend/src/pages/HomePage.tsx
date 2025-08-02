@@ -15,7 +15,7 @@ function HomePage() {
             .then((response) => response.json())
             .then((data) => {
                 setPredictionResult(data.character);
-                setAccuracy(data.prediction || 92.5);
+                setAccuracy(data.confidence);
             })
             .catch((error) => {
                 console.error('Prediction error:', error);
@@ -58,7 +58,7 @@ function HomePage() {
                                 <div className="accuracy-bar-container">
                                     <div
                                         className="accuracy-bar"
-                                        style={{ width: `${accuracy}%` }}
+                                        style={{ width: `${accuracy * 100}%` }}
                                     ></div>
                                 </div>
                                 <div className="accuracy-percentage">

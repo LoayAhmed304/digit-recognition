@@ -10,4 +10,6 @@ build/
 
 # Model
 *.h5
+scripts/
+models/
 
