@@ -6,7 +6,7 @@ services:
             context: ./server
             dockerfile: Dockerfile
         ports:
-            - '6000:80'
+            - '6000:8000'
     frontend:
         container_name: digit-frontend
         build:

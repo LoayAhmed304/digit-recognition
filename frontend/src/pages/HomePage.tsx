@@ -7,7 +7,7 @@ function HomePage() {
     const [accuracy, setAccuracy] = React.useState(0);
 
     const handlePredict = (imageData: number[]) => {
-        fetch('https://digit.loay.work/predict', {
+        fetch('http://localhost:8000/predict', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(imageData),
